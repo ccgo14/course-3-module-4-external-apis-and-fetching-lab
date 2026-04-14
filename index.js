@@ -70,6 +70,11 @@ function displayError(message) {
     alertsDisplay.innerHTML = ""; 
 }
 
-// Attach listeners to both submit and click to prevent test timeouts
-searchForm.addEventListener("submit", handleSearch);
-fetchButton.addEventListener("click", handleSearch);
+
+if (searchForm) {
+    searchForm.addEventListener("submit", handleSearch);
+}
+
+if (fetchButton) {
+    fetchButton.addEventListener("click", handleSearch);
+}
